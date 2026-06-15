@@ -1,0 +1,475 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Ángela Vega Sánchez — CV</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=Outfit:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <style>
+    *, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
+
+    body {
+      font-family: 'Outfit', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+      background: #ecece9;
+      color: #292524;
+      line-height: 1.5;
+      -webkit-font-smoothing: antialiased;
+      padding: 48px 20px;
+    }
+
+    .page {
+      max-width: 210mm;
+      margin: 0 auto;
+      background: #ffffff;
+      padding: 30mm 28mm;
+      box-shadow: 0 8px 32px rgba(0,0,0,0.05);
+      min-height: 297mm;
+      position: relative;
+      border: 1.5px solid #e7e5e4;
+    }
+
+    .page::before {
+      content: '';
+      position: absolute;
+      top: 12px;
+      left: 12px;
+      right: 12px;
+      bottom: 12px;
+      border: 1px solid #e7e5e4;
+      pointer-events: none;
+    }
+
+    /* Section accent bar */
+    .section-head {
+      display: flex;
+      align-items: center;
+      gap: 14px;
+      margin-bottom: 10px;
+      margin-top: 22px;
+      position: relative;
+    }
+
+    .section-head::before {
+      content: '';
+      width: 3px;
+      height: 18px;
+      background: #0d5e57;
+      border-radius: 2px;
+      flex-shrink: 0;
+    }
+
+    .section-head:first-of-type {
+      margin-top: 0;
+    }
+
+    .section-head-label {
+      font-size: 9px;
+      font-weight: 600;
+      color: #0d5e57;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+      white-space: nowrap;
+    }
+
+    .section-head-line {
+      flex: 1;
+      height: 1px;
+      background: #e7e5e4;
+    }
+
+    /* Monogram */
+    .cv-mono {
+      font-family: 'DM Serif Display', serif;
+      font-size: 26px;
+      font-weight: 400;
+      color: #0d5e57;
+      text-align: center;
+      line-height: 1;
+      margin-bottom: 4px;
+      letter-spacing: -1px;
+    }
+
+    .cv-mono-dot {
+      color: #0d5e57;
+      opacity: 0.5;
+    }
+
+    .cv-name {
+      font-family: 'DM Serif Display', serif;
+      font-size: 26px;
+      font-weight: 400;
+      color: #292524;
+      text-align: center;
+      letter-spacing: -0.5px;
+      margin-bottom: 6px;
+    }
+
+    .cv-divider {
+      width: 32px;
+      height: 1.5px;
+      background: #0d5e57;
+      margin: 0 auto 10px;
+      border-radius: 1px;
+    }
+
+    .cv-subtitle {
+      font-size: 9.5px;
+      font-weight: 500;
+      color: #0d5e57;
+      text-align: center;
+      letter-spacing: 2.5px;
+      text-transform: uppercase;
+      margin-bottom: 16px;
+    }
+
+    .cv-contact {
+      font-size: 8.5px;
+      color: #57534e;
+      text-align: center;
+      line-height: 1.7;
+      margin-bottom: 22px;
+    }
+
+    .cv-contact a {
+      color: #0d5e57;
+      text-decoration: none;
+    }
+
+    .cv-contact a:hover {
+      text-decoration: underline;
+    }
+
+    /* Entries */
+    .entry {
+      margin-bottom: 14px;
+    }
+
+    .entry:last-child {
+      margin-bottom: 0;
+    }
+
+    .entry-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: baseline;
+      gap: 12px;
+    }
+
+    .entry-title {
+      font-size: 10px;
+      font-weight: 600;
+      color: #292524;
+    }
+
+    .entry-date {
+      font-size: 8.5px;
+      font-weight: 500;
+      color: #0d5e57;
+      white-space: nowrap;
+      letter-spacing: 0.3px;
+    }
+
+    .entry-org {
+      font-size: 9px;
+      color: #57534e;
+      margin-bottom: 4px;
+    }
+
+    .entry-desc {
+      font-size: 8.5px;
+      color: #57534e;
+      line-height: 1.6;
+      padding-left: 0;
+    }
+
+    .entry-desc li {
+      list-style: none;
+      position: relative;
+      padding-left: 11px;
+      margin-bottom: 2px;
+    }
+
+    .entry-desc li::before {
+      content: '—';
+      position: absolute;
+      left: 0;
+      color: #0d5e57;
+      font-size: 7px;
+      top: 2px;
+    }
+
+    .entry-desc li:last-child {
+      margin-bottom: 0;
+    }
+
+    /* Education */
+    .edu-block {
+      margin-bottom: 10px;
+    }
+
+    .edu-block:last-child {
+      margin-bottom: 0;
+    }
+
+    .edu-title {
+      font-size: 10px;
+      font-weight: 600;
+      color: #292524;
+    }
+
+    .edu-meta {
+      font-size: 9px;
+      color: #57534e;
+      margin-bottom: 2px;
+    }
+
+    .edu-extra {
+      font-size: 8.5px;
+      color: #78716c;
+    }
+
+    /* Project */
+    .project-head {
+      display: flex;
+      justify-content: space-between;
+      align-items: baseline;
+      gap: 12px;
+    }
+
+    .project-title {
+      font-size: 10px;
+      font-weight: 600;
+      color: #292524;
+    }
+
+    .project-date {
+      font-size: 8.5px;
+      font-weight: 500;
+      color: #0d5e57;
+      white-space: nowrap;
+    }
+
+    .project-desc {
+      font-size: 8.5px;
+      color: #57534e;
+      line-height: 1.6;
+    }
+
+    /* Skills */
+    .skills-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 12px 28px;
+      margin-top: 4px;
+    }
+
+    .skill-group-title {
+      font-size: 8.5px;
+      font-weight: 600;
+      color: #292524;
+      letter-spacing: 0.5px;
+      margin-bottom: 3px;
+      text-transform: uppercase;
+      font-size: 7.5px;
+      letter-spacing: 1px;
+    }
+
+    .skill-items {
+      font-size: 8.5px;
+      color: #57534e;
+      line-height: 1.6;
+    }
+
+    /* Footer */
+    .cv-footer {
+      margin-top: 24px;
+      padding-top: 12px;
+      border-top: 1px solid #e7e5e4;
+      text-align: center;
+      font-size: 7.5px;
+      color: #a8a29e;
+      letter-spacing: 0.5px;
+    }
+
+    /* Print */
+    @media print {
+      body {
+        background: white;
+        padding: 0;
+      }
+
+      .page {
+        box-shadow: none;
+        border: none;
+        padding: 25mm 25mm;
+        min-height: auto;
+      }
+
+      .page::before {
+        top: 8px;
+        left: 8px;
+        right: 8px;
+        bottom: 8px;
+      }
+
+      .section-head {
+        break-after: avoid;
+      }
+
+      .entry, .edu-block {
+        break-inside: avoid;
+      }
+
+      a {
+        color: #0d5e57 !important;
+        text-decoration: none !important;
+      }
+    }
+
+    @media (max-width: 600px) {
+      body { padding: 12px; }
+      .page { padding: 20px; }
+      .page::before { display: none; }
+      .skills-grid { grid-template-columns: 1fr; }
+      .entry-header { flex-direction: column; gap: 2px; }
+      .entry-date { white-space: normal; }
+    }
+  </style>
+</head>
+<body>
+  <div class="page">
+
+    <!-- Monogram -->
+    <p class="cv-mono">ÁV<span class="cv-mono-dot">.</span></p>
+
+    <!-- Header -->
+    <h1 class="cv-name">Ángela Vega Sánchez</h1>
+    <div class="cv-divider"></div>
+    <p class="cv-subtitle">Desarrolladora Web con formación en Sociología</p>
+
+    <p class="cv-contact">
+      Murcia · +34 601 43 70 23 · <a href="mailto:vegasanchezangela@gmail.com">vegasanchezangela@gmail.com</a><br>
+      <a href="https://github.com/angelas482511" target="_blank">github.com/angelas482511</a> ·
+      <a href="https://www.linkedin.com/in/%C3%A1ngela-vega-s%C3%A1nchez-803484291/" target="_blank">linkedin.com/in/ángela-vega-sánchez</a><br>
+      <a href="https://angelas482511.github.io/porfolio" target="_blank">angelas482511.github.io/porfolio</a>
+    </p>
+
+    <!-- Perfil -->
+    <div class="section-head">
+      <span class="section-head-label">Perfil Profesional</span>
+      <div class="section-head-line"></div>
+    </div>
+
+    <p class="project-desc" style="margin-bottom:0;">
+      Desarrolladora web con formación en Sociología. Abordo el desarrollo desde una perspectiva analítica: antes de escribir código, investigo qué necesitan las personas y cómo se comportan. He aplicado este enfoque analizando encuestas sobre adicciones con R, desarrollando un asistente por voz para mayores en mis prácticas, y evaluando políticas de transparencia municipal. Busco mi primera oportunidad profesional donde aportar mi capacidad de análisis, adaptabilidad y visión multidisciplinar.
+    </p>
+
+    <!-- Experiencia -->
+    <div class="section-head">
+      <span class="section-head-label">Experiencia</span>
+      <div class="section-head-line"></div>
+    </div>
+
+    <div class="entry">
+      <div class="entry-header">
+        <span class="entry-title">Desarrolladora en prácticas</span>
+        <span class="entry-date">Mar – Jun 2026</span>
+      </div>
+      <p class="entry-org">Senior Care (RITA) · CESUR, Murcia</p>
+      <ul class="entry-desc">
+        <li>Desarrollo de un sistema de asistencia por voz para personas mayores sobre Raspberry Pi con Python + FastAPI + Flutter</li>
+        <li>Integración MQTT para detección de emergencias y notificaciones en tiempo real</li>
+        <li>Análisis del bienestar diario mediante IA</li>
+      </ul>
+    </div>
+
+    <div class="entry">
+      <div class="entry-header">
+        <span class="entry-title">Encuestadora y Análisis de Datos</span>
+        <span class="entry-date">Abr – Jul 2023</span>
+      </div>
+      <p class="entry-org">Universidad de Murcia</p>
+      <ul class="entry-desc">
+        <li>Participación en evaluación de adicciones en adolescentes a nivel regional</li>
+        <li>Recopilación y procesamiento de datos con R, elaboración de informes con visualizaciones</li>
+        <li>Análisis cualitativo y cuantitativo de encuestas y grupos de discusión</li>
+      </ul>
+    </div>
+
+    <div class="entry">
+      <div class="entry-header">
+        <span class="entry-title">Personal Administrativo</span>
+        <span class="entry-date">Ago 2022</span>
+      </div>
+      <p class="entry-org">Consejo de Transparencia de la Región de Murcia</p>
+      <ul class="entry-desc">
+        <li>Evaluación del cumplimiento de la Ley 12/2014 en portales de transparencia municipales</li>
+      </ul>
+    </div>
+
+    <!-- Educación -->
+    <div class="section-head">
+      <span class="section-head-label">Educación</span>
+      <div class="section-head-line"></div>
+    </div>
+
+    <div class="edu-block">
+      <p class="edu-title">FP Superior en Desarrollo de Aplicaciones Web</p>
+      <p class="edu-meta">CESUR, Murcia · 2024 – 2026</p>
+    </div>
+
+    <div class="edu-block">
+      <p class="edu-title">Grado en Sociología</p>
+      <p class="edu-meta">Universidad de Murcia · 2019 – 2023</p>
+      <p class="edu-extra">Nota media 7,45/10 · TFG: Salud mental juvenil (9,9 – Matrícula de Honor)</p>
+      <p class="edu-extra">5 Matrículas de Honor en Investigación Cuantitativa, Geografía Humana y otras</p>
+    </div>
+
+    <!-- Proyecto -->
+    <div class="section-head">
+      <span class="section-head-label">Proyecto Destacado</span>
+      <div class="section-head-line"></div>
+    </div>
+
+    <div class="entry">
+      <div class="project-head">
+        <span class="project-title">SOS La Azohía — TFG DAW</span>
+        <span class="project-date">2026</span>
+      </div>
+      <p class="project-desc">
+        Aplicación web PHP + MySQL + Bootstrap 5 con sistema de donaciones, carrito de compra, panel de administración y gestión de noticias. Desarrollado para asociación real de protección del litoral.
+      </p>
+    </div>
+
+    <!-- Habilidades -->
+    <div class="section-head">
+      <span class="section-head-label">Habilidades</span>
+      <div class="section-head-line"></div>
+    </div>
+
+    <div class="skills-grid">
+      <div>
+        <p class="skill-group-title">Lenguajes</p>
+        <p class="skill-items">JavaScript · SQL · R · HTML · CSS</p>
+      </div>
+      <div>
+        <p class="skill-group-title">Frameworks y Herramientas</p>
+        <p class="skill-items">Bootstrap · Docker · Git · Linux</p>
+      </div>
+      <div>
+        <p class="skill-group-title">Bases de Datos</p>
+        <p class="skill-items">MySQL · Oracle · PostgreSQL</p>
+      </div>
+      <div>
+        <p class="skill-group-title">Idiomas</p>
+        <p class="skill-items">Español (nativo) · Inglés (B2)</p>
+      </div>
+    </div>
+
+    <p class="cv-footer">CV online — actualizado junio 2026</p>
+
+  </div>
+</body>
+</html>
